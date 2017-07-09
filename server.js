@@ -11,7 +11,7 @@ var bodyParser = require('body-parser'); 	// pull information from HTML POST (ex
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 // configuration ===============================================================
-mongoose.connect(database.url, function(err) { // connect to mongoDB database on modulus.io
+mongoose.connect(database.url, function(err) { // connect to mongoDB database
     console.log(" DATABASE ERROR", err);
 });
 
