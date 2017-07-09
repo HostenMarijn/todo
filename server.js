@@ -11,7 +11,8 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 
 // configuration ===============================================================
 mongoose.connect(database.url, function(err, db) { // connect to mongoDB database on modulus.io
-    console.log("----TESTING DATABASE CONNECTED", err, db);
+    console.log(" DATABASE ERROR", err);
+    console.log(" DATABASE DB", db);
 });
 
 app.use(express.static(__dirname + '/public')); 				// set the static files location /public/img will be /img for users
