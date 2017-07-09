@@ -10,8 +10,8 @@ var bodyParser = require('body-parser'); 	// pull information from HTML POST (ex
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 // configuration ===============================================================
-mongoose.connect(database.url, function() { // connect to mongoDB database on modulus.io
-    console.log("----TESTING DATABASE CONNECTED");
+mongoose.connect(database.url, function(err, db) { // connect to mongoDB database on modulus.io
+    console.log("----TESTING DATABASE CONNECTED", err, db);
 });
 
 app.use(express.static(__dirname + '/public')); 				// set the static files location /public/img will be /img for users
